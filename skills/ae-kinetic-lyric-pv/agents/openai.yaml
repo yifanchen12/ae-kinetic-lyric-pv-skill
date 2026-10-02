@@ -1,4 +1,4 @@
 interface:
-  display_name: "AE 黑白叙事歌词 PV"
-  short_description: "Fresh monochrome lyric PVs with native AE animation"
-  default_prompt: "Use $ae-kinetic-lyric-pv to create a full-length monochrome lyric video with newly created artwork, phrase-timed screen lyrics, an editable native After Effects project, and verified export."
+  display_name: "AE 叙事歌词 PV · 黑白/彩色"
+  short_description: "Lyric PVs with selectable color modes, styles, and tones"
+  default_prompt: "Use $ae-kinetic-lyric-pv to create a full-length lyric video in my chosen visual style, lyric tone, and monochrome or color mode, with newly created artwork, phrase-timed screen lyrics, an editable native After Effects project, and verified export."

@@ -10,6 +10,8 @@ Verify the rendered result, not merely the build script's exit code. Use checks 
 | AE integrity | Saved project and inspected or reopened footage links; prototype/render logs | Missing artwork, substituted fonts, expression errors, unsupported output module |
 | Export structure | Media probe plus a full error-reporting decode of video and audio | Truncated file, decoder errors, incorrect dimensions/frame rate, missing audio |
 | Typography | Frames from every section and dense samples around motion | Clipped CJK glyphs, illegible secondary lines, low contrast, shimmer, collisions |
+| Mode switching | Mode control and representative rendered frames in monochrome and color, when both are deliverable | Partial recoloring, unreadable accents, flat grayscale contrast, unintended changes to lyrics/timing/motion |
+| Creative direction | Brief, lyric document, and representative section frames | Unrequested self-mockery or AI subject, artwork inconsistent with the selected style, tone that contradicts the brief |
 | Synchronization | Listening/playback of phrase entries and section transitions where available | Drift, wrong repeated line, text too late or too briefly shown |
 | Audio policy | Stream comparison or decoded-sample comparison appropriate to the claim | Unintended processing, offset, altered samples, unreported re-encoding |
 | Fresh material | Current task's asset manifest and generation/drawing provenance | Historical assets or reference frames entering the final composition |
@@ -29,6 +31,8 @@ An MP4 container's file hash will not match the source audio file. Do not use th
 ## Visual and timing review
 
 Review at least one meaningful interval in each verse, each chorus variant, all instrumental sections, the opening, climax, and ending. Include the longest line, smallest important text, fastest transition, and most crowded arrangement. Sample motion densely enough to catch brief overlays or collisions. Confirm readability at the target viewing size after final compression.
+
+Record the selected mode and palette. Verify that the mode control changes artwork treatment and palette-dependent layers together. When both modes are requested, render and review a representative sample in each, checking saturated backgrounds in color and tonal separation in monochrome. Keep timing, text, and motion identical unless the user asked to change them. If fresh color artwork is unavailable, report color switching as incomplete rather than testing only a text recolor. A single-mode delivery needs a full review of the requested mode and an honest statement of which alternative-mode checks were performed.
 
 Listen to representative phrase entries in each section and check the full timeline for accumulated drift. Where possible, play the completed video from start to finish with sound. If playback tools are unavailable, retain the structural and frame checks but label listening/synchronization review as unverified. Automated signal analysis is supplementary evidence, not a replacement for hearing words.
 

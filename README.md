@@ -2,20 +2,41 @@
 
 [简体中文](README.zh-CN.md) · English · [MIT License](LICENSE)
 
-A Codex skill for making monochrome narrative lyric videos in Adobe After Effects using native layers, expressions, keyframes, and project-specific scripts. It connects full-reference analysis, phrase-timed lyric writing, crisp manga-inspired visuals, kinetic typography, and verified full-song delivery.
+A Codex skill for making narrative lyric videos in Adobe After Effects with switchable **monochrome and color modes**, **selectable visual styles**, and **independent lyric tones**, using native layers, expressions, keyframes, and project-specific scripts. It connects full-reference analysis, phrase-timed lyric writing, freshly created visuals, kinetic typography, and verified full-song delivery.
 
 **This repository contains production instructions only. It contains no music, lyrics from existing songs, illustrations, character sheets, screenshots, brand logos, fonts, rendered videos, or AE projects. Every new production starts with newly created visual material. Reference videos inform decisions; their frames and assets are never copied into the output.**
 
 ## What it teaches
 
 - Analyze the complete reference timeline, then inspect motion at a finer interval instead of relying on isolated keyframes.
-- Write lyrical, optionally self-deprecating screen text and align it to vocal phrases while preserving the current project's chosen audio.
-- Combine black-and-white illustration, large CJK typography, quiet metadata, thin rules, alternating layouts, and restrained transitions.
+- Write screen lyrics in the selected tone and align them to vocal phrases while preserving the current project's chosen audio.
+- Combine fresh monochrome or color illustration, large CJK typography, quiet metadata, thin rules, alternating layouts, and restrained transitions.
 - Build an editable, plugin-free AE project with independent text, artwork, shapes, and animation.
 - Test a short engine prototype and a representative chorus before committing to a full render.
 - Verify video decoding, timing, missing footage, text readability, and the stated degree of audio preservation.
 
 It is an instruction skill, not a bundled renderer or a collection of reusable media. Resolution, frame rate, tone, budget, and composition are project decisions. The suggested 1080p/60 fps profile is adjustable.
+
+## Two visual modes
+
+| Mode | Visual direction | Invocation |
+| --- | --- | --- |
+| Monochrome | Black, white, restrained gray, crisp linework and strong tonal hierarchy | `Use monochrome mode` or `visual_mode: monochrome` |
+| Color | Fresh color artwork and a coordinated palette, with the same typography and motion grammar | `Use color mode` or `visual_mode: color` |
+
+Monochrome is the default when no mode is selected. The AE project exposes a mode control and centralized palette controls so a switch preserves lyrics, timing, and animation. A genuinely switchable project uses freshly created color-capable artwork with a tuned monochrome treatment. Grayscale-only artwork needs newly created color artwork before a full color version is possible. Only the requested mode is exported unless both versions are requested.
+
+## Style, tone, and theme
+
+These are independent choices, not presets that force one another:
+
+| Choice | Examples |
+| --- | --- |
+| `visual_style` | Manga, minimal typography, cinematic illustration, watercolor, retro print, or your own combination |
+| `lyric_tone` | Lyrical, uplifting, soothing, melancholic, romantic, narrative, satirical, self-deprecating, or a custom tone |
+| `theme` | The subject you choose; an AI theme is optional |
+
+Self-deprecation is one option, not the default. A monochrome PV can be uplifting and a color PV can be melancholic. Changing visual style may require new artwork and layout work; changing tone may require rewriting lyrics. Only color mode is designed as an AE toggle, and no historical media is reused for any of these changes.
 
 ## Install in Codex
 
@@ -30,10 +51,12 @@ Alternatively, place the complete `skills/ae-kinetic-lyric-pv` folder in the use
 ## Use
 
 ```text
-$ae-kinetic-lyric-pv Create a full-length monochrome lyric PV from the audio and lyrics I provide for this project. Analyze my reference video across its entire duration, write an original self-deprecating AI-themed adaptation for the screen, create all visual artwork anew, and deliver an editable plugin-free AE project plus a verified video. Use my chosen project directory and budget.
+$ae-kinetic-lyric-pv Create a full-length lyric PV from the audio and lyrics I provide for this project. Use color mode, watercolor visuals, a soothing lyric tone, and a theme of companionship. Analyze my reference video across its entire duration, create all visual artwork anew, and deliver an editable plugin-free AE project plus a verified video. Use my chosen project directory and budget.
 ```
 
 Provide the current audio, source text when needed, an optional reference video, output directory, and creative constraints. The skill distinguishes screen lyric adaptation from rewriting the actual sung vocals. A reference is optional; there are no bundled example media.
+
+For color, add `Use color mode` to the request. To change a current project, request `Switch this project's visual mode to color; retain the lyrics, timing, and motion, then verify a short preview`. The same operation supports switching back to monochrome. All artwork must originate in the current project.
 
 ## Requirements and boundaries
 
