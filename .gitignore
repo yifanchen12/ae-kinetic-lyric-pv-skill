@@ -1,0 +1,20 @@
+# Method-only repository: allow only the documented skill package.
+*
+!.gitignore
+!README.md
+!README.zh-CN.md
+!LICENSE
+!skills/
+skills/*
+!skills/ae-kinetic-lyric-pv/
+skills/ae-kinetic-lyric-pv/*
+!skills/ae-kinetic-lyric-pv/SKILL.md
+!skills/ae-kinetic-lyric-pv/LICENSE
+!skills/ae-kinetic-lyric-pv/agents/
+skills/ae-kinetic-lyric-pv/agents/*
+!skills/ae-kinetic-lyric-pv/agents/openai.yaml
+!skills/ae-kinetic-lyric-pv/references/
+skills/ae-kinetic-lyric-pv/references/*
+!skills/ae-kinetic-lyric-pv/references/workflow.md
+!skills/ae-kinetic-lyric-pv/references/visual-language.md
+!skills/ae-kinetic-lyric-pv/references/verification.md
